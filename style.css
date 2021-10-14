@@ -536,7 +536,9 @@ header.active {
   color: var(--light-color);
   font-size: 1.5rem;
 }
-
+.swiper-container {
+  overflow-x: hidden;
+}
 .review .review-slider .slide {
   background: var(--white-color);
   border-radius: 0.5rem;

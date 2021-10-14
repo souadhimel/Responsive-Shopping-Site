@@ -46,8 +46,23 @@ document.querySelectorAll(".small-image-3").forEach((images) => {
     document.querySelector(".big-image-3").src = images.getAttribute("src");
   };
 });
-
-let countDate = new Date("aug 1, 2021 00:00:00").getTime();
+let month = [
+  "jan",
+  "feb",
+  "mar",
+  "apr",
+  "may",
+  "jun",
+  "jul",
+  "aug",
+  "sep",
+  "oct",
+  "nov",
+  "dec",
+];
+let countDate = new Date(
+  `${month[new Date().getMonth() + 1]} 1, ${new Date().getFullYear()} 00:00:00`
+).getTime();
 
 function countDown() {
   let now = new Date().getTime();
@@ -69,9 +84,7 @@ function countDown() {
   document.getElementById("seconds").innerText = s;
 }
 
-setInterval(function () {
-  countDown();
-}, 1000);
+setInterval(countDown, 1000);
 
 var swiper = new Swiper(".product-slider", {
   slidesPerView: 3,
