@@ -46,6 +46,8 @@ document.querySelectorAll(".small-image-3").forEach((images) => {
     document.querySelector(".big-image-3").src = images.getAttribute("src");
   };
 });
+
+//Countdown timer
 let month = [
   "jan",
   "feb",
@@ -85,6 +87,8 @@ function countDown() {
 }
 
 setInterval(countDown, 1000);
+
+// Swiper
 
 var swiper = new Swiper(".product-slider", {
   slidesPerView: 3,
